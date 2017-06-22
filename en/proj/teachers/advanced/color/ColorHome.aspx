@@ -167,7 +167,7 @@ exercises let students practice using the concepts introduced in the project.
 Explore exercises are designed to get students to explore SkyServer data to 
 discover concepts on their own. For answers to all Questions and Practice 
 exercises, and sample responses to all Explore exercises, 
-    email us at <a href="sciserver-helpdesk@lists.johnshopkins.edu">sciserver-helpdesk@lists.johnshopkins.edu</a>.
+    email us at <a href="mailto:<%=ConfigurationManager.AppSettings["helpdesk"].ToString()%>"> <%=ConfigurationManager.AppSettings["helpdesk"].ToString()%></a>.
     
 <!--    click <A href="#questions" 
   onclick="javascript:answers(1);">here</a>. To see the answers, you must have 
