@@ -23,7 +23,7 @@ namespace SkyServer.Tools.Explore
         protected double ra;
         protected double dec;
 
-        protected long? specObjId = null;
+        protected decimal? specObjId = null;
         protected int? clean = null;
         protected int? mode = null;
         protected string otype = null;
@@ -91,7 +91,7 @@ namespace SkyServer.Tools.Explore
                     {
                         ra = (double)reader["ra"];
                         dec = (double)reader["dec"];
-                        specObjId = reader["specObjId"] is DBNull ? -999999 : (long)(reader["specObjId"]);
+                        specObjId = reader["specObjId"] is DBNull ? -999999 : (decimal)(reader["specObjId"]);
                         clean = (int)reader["clean"];
                         survey = reader["survey"] is DBNull ? null : (string)reader["survey"];
                         mode = (int)reader["mode"];
