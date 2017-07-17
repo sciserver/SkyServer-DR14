@@ -94,7 +94,7 @@ namespace SkyServer.Tools.QuickLook
                 objectInfo.id = Utilities.ParseId(objectInfo.objId);
 
             if (objectInfo.specObjId != null && !objectInfo.specObjId.Equals(""))
-                objectInfo.specId = Utilities.ParseId(objectInfo.specObjId);
+                objectInfo.specId = Utilities.ParseSpecObjId(objectInfo.specObjId);
         }
 
 
@@ -106,8 +106,8 @@ namespace SkyServer.Tools.QuickLook
             {
                 if (reader.Read())
                 {
-                    objectInfo.objId = reader["objId"] is DBNull ? null : Functions.BytesToHex((byte[])reader["objId"]);
-                    objectInfo.specObjId = reader["specObjId"] is DBNull ? null : Functions.BytesToHex((byte[])reader["specObjId"]);
+                    objectInfo.objId = reader["objId"] is DBNull ? null : (reader["objId"]).ToString();
+                    objectInfo.specObjId = reader["specObjId"] is DBNull ? null : (reader["specObjId"]).ToString();
                     objectInfo.ra = reader["ra"] is DBNull ? null : (double?)reader["ra"];
                     objectInfo.dec = reader["dec"] is DBNull ? null : (double?)reader["dec"];
 

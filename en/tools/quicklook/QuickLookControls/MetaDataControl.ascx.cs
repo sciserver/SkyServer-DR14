@@ -19,7 +19,7 @@ namespace SkyServer.Tools.QuickLook
         protected double? ra ;
         protected double? dec ;
 
-        protected long? specObjId = null;
+        protected decimal? specObjId = null;
         protected int? clean = null;
         protected int? mode = null;
         protected string otype = null;

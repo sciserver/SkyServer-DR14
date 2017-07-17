@@ -26,7 +26,7 @@ namespace SkyServer.Tools.Explore
         public ExplorerQueries exploreQuery;       
 
         public long? id = null;        
-        public long? specId = null;
+        public decimal? specId = null;
         public string apid;
         public string objId = null;
         public string specObjId = null;

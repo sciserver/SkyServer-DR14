@@ -106,7 +106,7 @@ namespace SkyServer.Tools.Explore
 
             if (objectInfo.specObjId != null && !objectInfo.specObjId.Equals("") && objectInfo.specId != 0)
             {
-                objectInfo.specId = Utilities.ParseId(objectInfo.specObjId);
+                objectInfo.specId = Utilities.ParseSpecObjId(objectInfo.specObjId);
                 objectInfo.plateId = objectInfo.LoadExplore.Tables["SpectralData"].Rows.Count == 0 ? null : objectInfo.LoadExplore.Tables["SpectralData"].Rows[0]["plateId"].ToString();
             }
 

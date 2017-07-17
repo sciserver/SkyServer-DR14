@@ -119,7 +119,7 @@ namespace SkyServer.Tools.Explore
                         camcol = reader["camcol"] is DBNull ? -9999 : (byte)reader["camcol"];
                         field = reader["field"] is DBNull ? -9999 : (short)reader["field"];
                         fieldId = reader["fieldId"] is DBNull ? " " : Functions.BytesToHex((byte[])reader["fieldId"]);
-                        objId = reader["objId"] is DBNull ? null : Functions.BytesToHex((byte[])reader["objId"]);
+                        objId = reader["objId"] is DBNull ? null : (reader["objId"]).ToString();
                         clean = reader["clean"] is DBNull ? -99999 : (int)reader["clean"]; ;
                         otype = reader["clean"] is DBNull ? "" : (string)reader["otype"];
 

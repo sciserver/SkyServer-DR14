@@ -10,7 +10,7 @@ namespace SkyServer.Tools.QuickLook
     {
         public long? id = null;
         public string apid;
-        public long? specId = null;
+        public decimal? specId = null;
 
         public string objId = null;
         public string specObjId = null;

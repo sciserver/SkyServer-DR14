@@ -33,7 +33,7 @@ namespace SkyServer.Tools.Explore
         protected double veldisp;
         protected double veldisp_err;
         protected string targeting_flags;
-        protected long? specObjId;
+        protected decimal? specObjId;
         protected string run2d;
 
         protected RunQuery runQuery;
@@ -60,7 +60,7 @@ namespace SkyServer.Tools.Explore
                 //specId = Request.QueryString["spec"];
                 objId = master.objId;
                 specId = master.specObjId;
-                specObjId = Utilities.ParseId(specId);
+                specObjId = Utilities.ParseSpecObjId(specId);
             }
             catch(Exception exp){
                 specObjId = null;

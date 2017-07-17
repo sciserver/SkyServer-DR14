@@ -15,7 +15,7 @@ namespace SkyServer.Tools.Explore
     public partial class FitsSpec : System.Web.UI.Page
     {
         protected string[] hrefsSpec;
-        long? specObjId = null;
+        decimal? specObjId = null;
 
         protected Globals globals;
 
@@ -29,11 +29,11 @@ namespace SkyServer.Tools.Explore
             globals = (Globals)Application[Globals.PROPERTY_NAME];
 
             string sid = Request.QueryString["sid"];
-            specObjId = Utilities.ParseId(sid);
+            specObjId = Utilities.ParseSpecObjId(sid);
             hrefsSpec = getFits(specObjId);
         }
 
-        string[] getFits(long? specObjId)
+        string[] getFits(decimal? specObjId)
         {
             string[] result = null;
             string cmd = "select dbo.fGetUrlFitsSpectrum(@specObjId)";

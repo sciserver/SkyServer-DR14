@@ -16,7 +16,7 @@ namespace SkyServer.Tools.Explore
     {
         protected Globals globals;
         protected long? id = null;
-        protected long? specId = null;
+        protected decimal? specId = null;
 
         //protected string link;
         protected string idstring;
@@ -47,7 +47,7 @@ namespace SkyServer.Tools.Explore
                 if (qSpecId != null && !"".Equals(qSpecId))
                 {
                     // code changed by Jordan on 2013-3-28 to allow either decimal or hex input
-                    specId = Utilities.ParseId(qSpecId);
+                    specId = Utilities.ParseSpecObjId(qSpecId);
                     //if (qSpecId.StartsWith("0x")) specId = Int64.Parse(qSpecId.Substring(2), NumberStyles.AllowHexSpecifier);
                     //else specId = Int64.Parse(qSpecId);
 

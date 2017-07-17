@@ -17,7 +17,7 @@ namespace SkyServer.Get
         {
             context.Response.ContentType = "image/gif";
 
-            long specid = long.Parse(context.Request.QueryString["ID"]);
+            decimal specid = decimal.Parse(context.Request.QueryString["ID"]);
 
             Globals globals = (Globals)context.Application[Globals.PROPERTY_NAME];
             ResponseREST rs = new ResponseREST();
