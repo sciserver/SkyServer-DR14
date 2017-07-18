@@ -103,7 +103,7 @@
             {
                 makeGlass(oRa, oDec);
                 makeLinks();
-                long? specObjId = getSpecObjId(oConn, objId);
+                decimal? specObjId = getSpecObjId(oConn, objId);
                 if (specObjId.HasValue && specObjId != 0)
                 {
                     makeThumbnail(specObjId??0);

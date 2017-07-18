@@ -29,7 +29,7 @@ namespace SkyServer.Tools.Explore
 
          long? id = null;
          string apid;
-         long? specId = null;
+         decimal? specId = null;
          string sidstring = null;
          double? qra = null;
          double? qdec = null;

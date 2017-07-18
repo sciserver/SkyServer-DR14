@@ -476,6 +476,7 @@ namespace SkyServer.Tools.Search
         public DataSet GetObjectInfoFromWebService(String serviceURI, string URIparameters)
         {
             //string URI = "";
+            
             string ErrorMessage = "";
             try
             {

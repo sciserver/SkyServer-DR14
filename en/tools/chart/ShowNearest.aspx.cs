@@ -38,9 +38,9 @@ namespace SkyServer.Tools.Chart
             }
         }
 
-        protected long? getSpecObjId(SqlConnection oConn, long objId)
+        protected decimal? getSpecObjId(SqlConnection oConn, long objId)
         {
-            long? specObjId = null;
+            decimal? specObjId = null;
 
             string cmd = "select s.specObjId as specObjId ";
             cmd += " from PhotoObjAll p LEFT OUTER JOIN SpecObj s ON s.bestobjid=p.objid where p.objId=@objid";
@@ -54,14 +54,14 @@ namespace SkyServer.Tools.Chart
                     if (reader.Read())
                     {
                         if (!reader.IsDBNull(0))
-                            specObjId = reader.GetInt64(0);
+                            specObjId = reader.GetDecimal(0);
                     }
                 }
             }
             return specObjId;
         }
 
-        protected string getSpecImageLink(long specObjId)
+        protected string getSpecImageLink(decimal specObjId)
         {
             return "../../get/SpecById.ashx?id=" + specObjId;
         }
@@ -144,7 +144,7 @@ namespace SkyServer.Tools.Chart
             Response.Write("<div id='zframe'><img src='images/mglass.gif' width=150 height=150 ONMOUSEOVER=\"this.T_TEMP=\'2000\';this.T_WIDTH=\'140\';return escape(\'Close-up image of selected object\')\"></div>\n");
         }
 
-        protected void makeThumbnail(long specObjId)
+        protected void makeThumbnail(decimal specObjId)
         {
             string str = "";
             str += "<div id='sframe' ><img src='images/specframe.png'></div>";
