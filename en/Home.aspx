@@ -74,7 +74,7 @@
 					&nbsp;<br>
 					The site hosts data from <a href="<%=globals.SdssUrl%>">Data Release <%=globals.ReleaseNumber%> (<%=globals.Release%>)</a>.
 					<a href="<%=globals.SdssUrl%>whatsnew">What's new in <%=globals.Release%></a>, 
-					<a href="news.aspx">what's new on this site</a> and 
+					<!--<a href="news.aspx">what's new on this site</a>--> and 
 					<a href="<%=globals.SdssUrl%>problems">known problems</a>. 
 					<a class="newstext"	href="<%=globals.SdssUrl%>">More...</a>
 				</td>
