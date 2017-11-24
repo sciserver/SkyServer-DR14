@@ -72,7 +72,6 @@
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="tophead">
-
         <h2 align="center">SkyQuery CrossMatch Client</h2>
         <p align="center">
             This tool uses <a href="<%=string.IsNullOrEmpty(token) ? skyqueryurl : skyqueryurl + "?token="+token%>" target="_blank">SkyQuery</a>  web services to run a crossmatch between catalogs of astronomical sources. 
@@ -109,7 +108,7 @@ INTO twowayxmatch
 FROM XMATCH(
      MUST EXIST IN SDSSDR7:PhotoObjAll AS s 
           WITH(POINT(s.ra, s.dec), ERROR(0.1, 0.1, 0.1)), 
-     MUST EXIST IN GALEX:PhotoObjAll AS g 
+     MUST EXIST IN GALEXGR6:PhotoObjAll AS g 
           WITH(POINT(g.ra, g.dec), ERROR(0.2, 0.2, 0.2)), 
      LIMIT BAYESFACTOR TO 1e3
 ) AS x
